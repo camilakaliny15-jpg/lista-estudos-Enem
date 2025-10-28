@@ -2,6 +2,7 @@ body, h1, input, button, li {
   font-family: 'Creepster', cursive;
 }
 body {
+  background: linear-gradient(180deg, #1a1a1a, #3a0000);
   background-color: #1a1a1a;
   color: #fff;
   display: flex;
