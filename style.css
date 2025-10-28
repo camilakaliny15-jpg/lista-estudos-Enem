@@ -1,16 +1,58 @@
+body, h1, input, button, li {
+  font-family: 'Creepster', cursive;
+}
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f0f0f0;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
-
-h1 {
+.container {
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 50px auto;
   text-align: center;
+  box-shadow: 0 0 20px #ff6f61;
+}
+.botoes button {
+  margin-top: 8px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+.botoes button:hover {
+  transform: scale(1.2);
+}
+.add-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+h1 {
+  font-size: 2.5rem;
 }
 
-input {
-  padding: 5px;
-  width: 250px;
+h1 span.emoji {
+  font-size: 3rem;
+  animation: balancar 2s infinite alternate;
+}
+
+@keyframes balancar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(15deg); }
 }
 
 button {
@@ -22,29 +64,33 @@ ul {
   list-style: none;
   padding: 0;
 }
-
 li {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  background: white;
-  border: 1px solid #ccc;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #2b2b2b;
+  margin: 8px 0;
   padding: 10px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px #000;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  background-color: #3a3a3a;
+}
+
+li span.concluido {
+  color: #ffb84d; /* laranja doce */
+}
+
+li span.pendente {
+  color: #ff4d4d; /* vermelho sangue */
 }
 
 .botoes button {
   margin-left: 5px;
-}
-
-.concluido {
-  color: green;
-  font-weight: bold;
-}
-
-.pendente {
-  color: red;
-  font-weight: bold;
 }
 
 .mensagem {
@@ -56,4 +102,28 @@ li img {
   height: 24px;
   margin-right: 10px;
   vertical-align: middle;
+}
+#addBtn {
+  background-color: #ff6f61;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#addBtn:hover {
+  background-color: #ff8c42;
+  transform: scale(1.05);
+}
+
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 5px;
+  width: 60%;
+}
+input, #addBtn {
+  flex-shrink: 0;
 }

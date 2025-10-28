@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Estudos Enem</title>
+  <title>Lista de Estudos</title>
+  <!-- Fonte Halloween -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Lista de Estudos Enem</h1>
+  <div class="container">
+    <h1><span class="emoji">🦇</span> Lista de Estudos Enem <span class="emoji">🕸️</span></h1>
 
-  <div id="mensagem" class="mensagem"></div>
+    <div id="mensagem" class="mensagem"></div>
 
-  <input type="text" id="materiaInput" placeholder="Digite uma matéria">
-  <button id="addBtn">Adicionar</button>
+    <div class="add-container">
+      <input type="text" id="materiaInput" placeholder="Digite uma matéria">
+      <button id="addBtn">Adicionar</button>
+    </div>
 
-  <ul id="listaMaterias"></ul>
+    <ul id="listaMaterias"></ul>
+  </div>
 
   <script src="script.js"></script>
 </body>
